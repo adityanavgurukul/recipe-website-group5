@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: lightgrey;
+    
+}
+.minisweet{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    grid-gap: 20px; 
+}
+.boxes{
+    height: 435.109px;
+    width: 299.5px;
+    padding: 12px;
+    /* border: 2px solid green; */
+    background-color: #E0BBE4;
+    margin-top: 25px;
+    border-radius: 6px;
+    transition: 0.5s;
+    margin-left: 4px ;
+    /* box-shadow: 10px 5px 4px 1px #23272D; */
+    box-shadow: 10px 5px 4px 1px grey;
+}
+.boxes:hover{
+    transform: scaleY(1.1);
+}
+
+.non-veg{
+    height: 291px;
+    width: 100%;
+    border-radius: 12px;
+    cursor: pointer;
+}
+.short-desc{
+    font-size: 18px;
+    font-weight: 200;
+    padding: 5px 0 0 0;
+    line-height: 15.3576px;
+    cursor: pointer;
+    color: black;
+}
+
+.rs{
+    font-size: 16px;
+    font-weight:700 ;
+    /* line-height: 20.4703px; */
+    display: block;
+    cursor: pointer;
+    line-height: 40px;
+    /* border: 2px solid gray; */
+    margin-top: 10px;
+    color: black;
+}
+.addtocard, 
+.addtocardto {
+    font-size: 12px;
+    line-height: 1.5;
+    text-align: center;
+    height: 31px;
+    width: calc(50% - 10px); 
+    border: none;
+    padding:5px;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 20px;
+    background-color: #FFFFFF;
+    margin-top:10px ;
+    
+
+}
+

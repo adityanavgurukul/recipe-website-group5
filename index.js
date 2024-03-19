@@ -114,13 +114,6 @@ function bar4() {
     });
 }
 
-
-
-
-
-
-
-
 let currentSlide = 0;
 const slides = document.querySelectorAll('.slide');
 

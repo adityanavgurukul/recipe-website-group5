@@ -4,24 +4,26 @@
     box-sizing: border-box;
 }
 body{
-    background-color: #355742
+    background-color: #974E3E;
+    margin: 40px 10px;
+    padding: 3px 1px;
     
+    /* opacity: 0.5; */
 }
 .minisweet{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
-    grid-gap: 20px; 
+    grid-gap: 20px;
 }
 .boxes{
-    height: 435.109px;
+    height: 450.109px;
     width: 299.5px;
     padding: 12px;
     /* border: 2px solid green; */
-    background-color:    #8D5524;
+    background-color: #A9796D;
     margin-top: 25px;
     border-radius: 6px;
     transition: 0.5s;
-    margin-left: 4px ;
     box-shadow: 10px 5px 4px 1px #23272D;
 }
 .boxes:hover{
@@ -36,7 +38,7 @@ body{
 }
 .short-desc{
     font-size: 18px;
-    font-weight: 900;
+    font-weight: 200;
     padding: 5px 0 0 0;
     line-height: 15.3576px;
     cursor: pointer;

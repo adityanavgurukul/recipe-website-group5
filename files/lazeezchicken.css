@@ -4,24 +4,29 @@
     box-sizing: border-box;
 }
 body{
-    background-color: #974E3E;
-    /* opacity: 0.5; */
+    background-color: lightgrey;
+    margin: 40px 10px;
+    padding: 3px 1px;
+    
+    
 }
 .minisweet{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid columns */
-    grid-gap: 20px; /* Set gap between grid items */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    grid-gap: 20px; 
 }
 .boxes{
-    height: 450.109px;
+    height: 435.109px;
     width: 299.5px;
     padding: 12px;
     /* border: 2px solid green; */
-    background-color: #A9796D;
+    background-color: #E0BBE4;
     margin-top: 25px;
     border-radius: 6px;
     transition: 0.5s;
-    box-shadow: 10px 5px 4px 1px #23272D;
+    margin-left: 4px ;
+    /* box-shadow: 10px 5px 4px 1px #23272D; */
+    box-shadow: 10px 5px 4px 1px grey;
 }
 .boxes:hover{
     transform: scaleY(1.1);
@@ -39,7 +44,7 @@ body{
     padding: 5px 0 0 0;
     line-height: 15.3576px;
     cursor: pointer;
-    color: white;
+    color: black;
 }
 
 .rs{
@@ -51,7 +56,7 @@ body{
     line-height: 40px;
     /* border: 2px solid gray; */
     margin-top: 10px;
-    color: white;
+    color: black;
 }
 .addtocard, 
 .addtocardto {

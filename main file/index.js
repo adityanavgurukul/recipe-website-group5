@@ -131,3 +131,108 @@ function nextSlide() {
 
 showSlide(currentSlide);
 setInterval(nextSlide, 2000); 
+
+
+
+
+
+
+
+
+
+// JavaScript code
+let addBtns = document.querySelectorAll('.add');
+let adde = document.querySelector(".add-el");
+
+addBtns.forEach(function(addBtn) {
+    addBtn.addEventListener('click', addItemBox1);
+});
+
+addBtns.forEach(function(addBtn) {
+    addBtn.addEventListener('click', addItemBox2);
+});
+
+addBtns.forEach(function(addBtn) {
+    addBtn.addEventListener('click', addItemBox3);
+});
+
+addBtns.forEach(function(addBtn) {
+    addBtn.addEventListener('click', addItemBox4);
+});
+
+function addItemBox1(event) {
+    let currentItem = event.target.closest('.box1');
+    let itemClone = currentItem.cloneNode(true);
+    let dele = document.createElement('button');
+    let add_c=itemClone.querySelector(".add")
+    dele.textContent = 'Delete';
+    dele.addEventListener('click', function() {
+        adde.removeChild(itemClone);
+    });
+    itemClone.removeChild(add_c);
+    itemClone.appendChild(dele);
+    adde.appendChild(itemClone);
+}
+
+function addItemBox2(event) {
+    let currentItem = event.target.closest('.box2');
+    let itemClone = currentItem.cloneNode(true);
+    let dele = document.createElement('button');
+    let add_c=itemClone.querySelector(".add");
+    dele.textContent = 'Delete';
+    dele.addEventListener('click', function() {
+        adde.removeChild(itemClone);
+    });
+    itemClone.removeChild(add_c);
+    itemClone.appendChild(dele);
+    adde.appendChild(itemClone);
+}
+
+function addItemBox3(event) {
+    let currentItem = event.target.closest('.box3');
+    let itemClone = currentItem.cloneNode(true);
+    let dele = document.createElement('button');
+    let add_c=itemClone.querySelector(".add");
+    dele.textContent = 'Delete';
+    dele.addEventListener('click', function() {
+        adde.removeChild(itemClone);
+    });
+    itemClone.removeChild(add_c);
+    itemClone.appendChild(dele);
+    adde.appendChild(itemClone);
+}
+
+function addItemBox4(event) {
+    let currentItem = event.target.closest('.box4');
+    let itemClone = currentItem.cloneNode(true);
+    let dele = document.createElement('button');
+    let add_c=itemClone.querySelector(".add")
+    dele.textContent = 'Delete';
+    dele.addEventListener('click', function() {
+        adde.removeChild(itemClone);
+    });
+    itemClone.removeChild(add_c);
+    itemClone.appendChild(dele);
+    adde.appendChild(itemClone);
+}
+
+ 
+const cart_page = document.querySelector(".add-el");
+const main_part = document.querySelector(".main");
+const cart = document.querySelector(".cart");
+
+cart_page.style.display = "none";
+
+cart.addEventListener('click', function() {
+    if (cart_page.style.display ==='flex') {
+        main_part.style.display = 'inline-block';
+        cart_page.style.display = 'none';
+    } else {
+        cart_page.style.display ='flex';
+        main_part.style.display = 'none';
+    }
+});
+
+
+
+

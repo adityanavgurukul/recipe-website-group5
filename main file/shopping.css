@@ -1,4 +1,4 @@
-.main{
+main{
     background-color: white;
 
 }
@@ -239,4 +239,22 @@ h2{
     height: 20vw;
     width: 90vw;
     margin: 4vw;
+}
+
+.add-el{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 5vw;
+    
+}
+.cart{
+    border-radius: 10px;
+    background-color: blue;
+    color: white;
+    box-shadow: rgba(223, 218, 218, 0.35) 0px 5px 15px;
+}
+.cart :hover{
+    background-color: rgb(83, 83, 207);
 }

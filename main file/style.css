@@ -2,10 +2,95 @@
     margin: 0%;
     padding: 0%;
 } */
+.login-page,
+.register-page {
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    z-index: 2; 
+    display: none; 
+}
+.form-box
+{
+    width: 300px;
+    height: 400px;
+    position:sticky;
+    top: 90px;
+    left: 210px;
+    background: transparent
+}
+.close 
+{
+    left: 270px;
+    bottom: 0;
+    top: 0;
+    color:white;
+    font-size: 35px;
+    font-weight: bold;
+}
+.close:hover,.close:focus 
+{
+    color: red;
+    cursor: pointer;
+}
+.main-heading
+{
+    color: orangered;
+    padding-bottom: 20px;
+}
+.form
+{
+    margin: 0 auto ;
+    width: 250px;
+    padding: 45px;
+    text-align: center;
+    box-shadow: 5px 5px 15px 5px gainsboro;
+    /* border: 2px solid ghostwhite;.  */
+    background-color:rgb(59, 58, 58);
+    border-radius: 10px;
+}
+.form input 
+{
+    font-family: sans-serif;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid black;
+    width: 100%;
+    margin: 0 0 15px;
+    padding: 15px;
+    font-size: 14px;
+}
+.loginbtn{
+    background: transparent;
+    border: 2px solid black;
+    color: white;
+    font-size: 20px;
+}
+.form button
+{
+    font-family: sans-serif;
+    width: 100%;
+    color: white;
+    margin-left: 12px;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 15px;
+    border: none;
+    background: coral;
+}
 
+.main-heading
+{
+    color: orangered;
+    padding-bottom: 20px;
+}
+body{
+    padding-top: 45px;
+}
 .slider{
     overflow: hidden;
-    height: 600px;
+    height: 700px;
     position: relative;
     width: 80%;
     box-shadow: 5px 1px 5px 5px rgba(244, 244, 250, 0.879);
@@ -367,19 +452,19 @@ nav {
     top: 1px;
     position: fixed;
     gap: 5vw;
-    height: 3vw;
-    width: 99vw;
+    height: 5vw;
+    width: 100%;
     text-align: center;
-    background-color: rgb(151, 149, 149);
-    font-size: 1.5vw;
-    border-radius: 15px;
+    background-color: black;
+    font-size:2vw;
     justify-content: center;
     align-items: center;
+    box-shadow: 5px 0px 20px 5px gainsboro;
 }
 
 #searchInput{
-    border-radius: 20px;
-    height: 2vw;
+    border-radius: 15px;
+    height: 1.5vw;
     width: 15vw;
 }
 
@@ -388,14 +473,15 @@ nav {
     height: 3vw;
     width: 3vw;
     position: relative;
-    top: 1=0.2vw;
-    left: 3vw;
+    top: 0.2vw;
+    /* left: 3vw; */
 }
 
 .search-button {
     border-radius: 20px;
-    height: 2.4vw;
+    height: 1.8vw;
     width: 5vw;
+    margin-left: 10px;
     font-size: 0.8vw;
     color: white;
     background-color: blue;
@@ -433,7 +519,7 @@ p:hover {
 ul{display: none;}
 .nav-a{
     font-size: 1.5vw;
-    color:black;
+    color:white;
 }
 
 @media only screen and (max-width: 768px) {

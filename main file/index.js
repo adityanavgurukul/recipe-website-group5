@@ -2,7 +2,7 @@ let s1 = document.querySelectorAll(".box1");
 let c1 = 0;
 
 s1.forEach(function(box1, index) {
-    box1.style.left = `${index * 100}%`;
+    box1.style.left = ${index * 100}%;
 });
 
 function next1() {
@@ -23,7 +23,7 @@ function pre1() {
 
 function bar1() {
     s1.forEach(function(box1) {
-        box1.style.transform = `translateX(-${c1 * 25}%)`;
+        box1.style.transform = translateX(-${c1 * 25}%);
     });
 }
 
@@ -31,7 +31,7 @@ let h1 = document.querySelectorAll(".box2");
 let b1 = 0;
 
 h1.forEach(function(box2, index) {
-    box2.style.left = `${index * 100}%`;
+    box2.style.left = ${index * 100}%;
 });
 
 function next2() {
@@ -52,7 +52,7 @@ function pre2() {
 
 function bar2() {
     h1.forEach(function(box2) {
-        box2.style.transform = `translateX(-${b1 * 25}%)`;
+        box2.style.transform = translateX(-${b1 * 25}%);
     });
 }
 
@@ -60,7 +60,7 @@ let s2 = document.querySelectorAll(".box3");
 let c2 = 0;
 
 s2.forEach(function(box1, index) {
-    box1.style.left = `${index * 100}%`;
+    box1.style.left = ${index * 100}%;
 });
 
 function next3() {
@@ -81,7 +81,7 @@ function pre3() {
 
 function bar3() {
     s2.forEach(function(box1) {
-        box1.style.transform = `translateX(-${c2 * 25}%)`;
+        box1.style.transform = translateX(-${c2 * 25}%);
     });
 }
 
@@ -89,7 +89,7 @@ let h2 = document.querySelectorAll(".box4");
 let b2 = 0;
 
 h2.forEach(function(box2, index) {
-    box2.style.left = `${index * 100}%`;
+    box2.style.left = ${index * 100}%;
 });
 
 function next4() {
@@ -110,7 +110,7 @@ function pre4() {
 
 function bar4() {
     h2.forEach(function(box2) {
-        box2.style.transform = `translateX(-${b2 * 25}%)`;
+        box2.style.transform = translateX(-${b2 * 25}%);
     });
 }
 
@@ -131,3 +131,106 @@ function nextSlide() {
 
 showSlide(currentSlide);
 setInterval(nextSlide, 2000); 
+
+
+
+
+
+
+
+
+
+// JavaScript code
+let addBtns = document.querySelectorAll('.add');
+let adde = document.querySelector(".add-el");
+
+addBtns.forEach(function(addBtn) {
+    addBtn.addEventListener('click', addItemBox1);
+});
+
+addBtns.forEach(function(addBtn) {
+    addBtn.addEventListener('click', addItemBox2);
+});
+
+addBtns.forEach(function(addBtn) {
+    addBtn.addEventListener('click', addItemBox3);
+});
+
+addBtns.forEach(function(addBtn) {
+    addBtn.addEventListener('click', addItemBox4);
+});
+
+function addItemBox1(event) {
+    let currentItem = event.target.closest('.box1');
+    let itemClone = currentItem.cloneNode(true);
+    let dele = document.createElement('button');
+    let add_c=itemClone.querySelector(".add")
+    dele.textContent = 'Delete';
+    dele.addEventListener('click', function() {
+        adde.removeChild(itemClone);
+    });
+    itemClone.removeChild(add_c);
+    itemClone.appendChild(dele);
+    adde.appendChild(itemClone);
+}
+
+function addItemBox2(event) {
+    let currentItem = event.target.closest('.box2');
+    let itemClone = currentItem.cloneNode(true);
+    let dele = document.createElement('button');
+    let add_c=itemClone.querySelector(".add");
+    dele.textContent = 'Delete';
+    dele.addEventListener('click', function() {
+        adde.removeChild(itemClone);
+    });
+    itemClone.removeChild(add_c);
+    itemClone.appendChild(dele);
+    adde.appendChild(itemClone);
+}
+
+function addItemBox3(event) {
+    let currentItem = event.target.closest('.box3');
+    let itemClone = currentItem.cloneNode(true);
+    let dele = document.createElement('button');
+    let add_c=itemClone.querySelector(".add");
+    dele.textContent = 'Delete';
+    dele.addEventListener('click', function() {
+        adde.removeChild(itemClone);
+    });
+    itemClone.removeChild(add_c);
+    itemClone.appendChild(dele);
+    adde.appendChild(itemClone);
+}
+
+function addItemBox4(event) {
+    let currentItem = event.target.closest('.box4');
+    let itemClone = currentItem.cloneNode(true);
+    let dele = document.createElement('button');
+    let add_c=itemClone.querySelector(".add")
+    dele.textContent = 'Delete';
+    dele.addEventListener('click', function() {
+        adde.removeChild(itemClone);
+    });
+    itemClone.removeChild(add_c);
+    itemClone.appendChild(dele);
+    adde.appendChild(itemClone);
+}
+
+
+
+ 
+const cart_page = document.querySelector(".add-el");
+const main_part = document.querySelector(".main");
+const cart = document.querySelector(".cart");
+
+cart_page.style.display = "none";
+
+cart.addEventListener('click', function() {
+    if (cart_page.style.display ==='flex') {
+        main_part.style.display = 'inline-block';
+        cart_page.style.display = 'none';
+    } else {
+        cart_page.style.display ='flex';
+        main_part.style.display = 'none';
+    }
+});
